@@ -27,7 +27,7 @@ const getGameDetail = async (id) => {
 
 const searchGames = async () => {
   try {
-    const { data } = await axios.get(`${baseURI}/search`)
+    const { data } = await axios.get(`${baseURI}search`)
 
     return data
   } catch (error) {
