@@ -15,7 +15,11 @@ mongoose.connect(
   `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@myfirstcluster0.q1bejuz.mongodb.net/${process.env.DB_NAME}`,
 )
 
-whiteListPorts = ['http://127.0.0.1:3005', 'http://localhost:3005']
+whiteListPorts = [
+  'http://127.0.0.1:3005',
+  'http://localhost:3005',
+  'https://game-sensei-frontend.onrender.com',
+]
 
 corsOptions = {
   origin: (origin, callback) => {

@@ -36,6 +36,11 @@ export default function SignUp() {
   const [open, setOpen] = useState(false)
   const [messageResponse, setMessageResponse] = useState('')
 
+  const url =
+    import.meta.env.VITE_APP_ENVIROMENT === 'DEV'
+      ? import.meta.env.VITE_LOCAL_URL
+      : import.meta.env.VITE_PUBLIC_URL
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
@@ -48,10 +53,7 @@ export default function SignUp() {
     }
 
     try {
-      const { status } = await axios.post(
-        'http://www.localhost:7077/login/addUser',
-        reqBody,
-      )
+      const { status } = await axios.post(`${url}login/addUser`, reqBody)
       if (status === 200) {
         setIsauthenticated(true)
       }

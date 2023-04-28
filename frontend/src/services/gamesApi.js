@@ -1,8 +1,13 @@
 import axios from 'axios'
 
+const baseURI =
+  import.meta.env.VITE_APP_ENVIROMENT === 'DEV'
+    ? import.meta.env.VITE_LOCAL_URL
+    : import.meta.env.VITE_PUBLIC_URL
+
 const getHomeGames = async () => {
   try {
-    const { data } = await axios.get('http://localhost:7077/home')
+    const { data } = await axios.get(`${baseURI}home`)
 
     return data
   } catch (error) {
@@ -12,7 +17,7 @@ const getHomeGames = async () => {
 
 const getGameDetail = async (id) => {
   try {
-    const { data } = await axios.get(`http://localhost:7077/game/${id}`)
+    const { data } = await axios.get(`${baseURI}game/${id}`)
 
     return data
   } catch (error) {
@@ -22,7 +27,7 @@ const getGameDetail = async (id) => {
 
 const searchGames = async () => {
   try {
-    const { data } = await axios.get('http://localhost:7077/search')
+    const { data } = await axios.get(`${baseURI}/search`)
 
     return data
   } catch (error) {

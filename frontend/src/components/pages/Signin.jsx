@@ -36,6 +36,10 @@ export default function SignIn() {
   const [isauthenticated, setIsauthenticated] = useState(false)
   const [open, setOpen] = useState(false)
   const [messageResponse, setMessageResponse] = useState('')
+  const url =
+    import.meta.env.VITE_APP_ENVIROMENT === 'DEV'
+      ? import.meta.env.VITE_LOCAL_URL
+      : import.meta.env.VITE_PUBLIC_URL
 
   const [inputs, setInputs] = useState({
     email: '',
@@ -55,10 +59,7 @@ export default function SignIn() {
     }
 
     try {
-      const { status } = await axios.post(
-        'http://www.localhost:7077/login/validate',
-        reqBody,
-      )
+      const { status } = await axios.post(`${url}login/validate`, reqBody)
       if (status === 200) {
         setIsauthenticated(true)
       }
