@@ -1,0 +1,65 @@
+.paddingall {
+  padding: 10px 10px 10px 10px;
+}
+.pricetitle {
+  font-weight: 600;
+}
+
+.pricetitle {
+  font-weight: 14px;
+}
+
+.iconstyle {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: antiquewhite;
+}
+
+.iconstyle1 {
+  color: antiquewhite;
+}
+
+.gradinet {
+  background: rgb(104, 95, 151);
+  background: linear-gradient(
+    158deg,
+    rgb(104, 95, 151) 0%,
+    rgba(104, 95, 151) 100%
+  );
+}
+
+.gradinetlight {
+  background: rgb(103, 162, 168);
+  background: linear-gradient(
+    158deg,
+    rgba(103, 162, 168) 0%,
+    rgba(103, 162, 168) 100%
+  );
+}
+
+.gradinetdark {
+  background: rgb(126, 170, 122);
+  background: linear-gradient(
+    158deg,
+    rgba(126, 170, 122) 0%,
+    rgba(126, 170, 122) 100%
+  );
+}
+.gradinetbottom {
+  background: rgb(168, 124, 132);
+  background: linear-gradient(
+    158deg,
+    rgba(168, 124, 132) 0%,
+    rgba(168, 124, 132) 100%
+  );
+}
+
+.bgcolor {
+  min-height: 100vh;
+  background: #eceff1;
+  background: linear-gradient(
+    158deg,
+    rbg(224, 224, 224) 0%,
+    rrgb(233, 237, 254) 100%
+  );
+}
