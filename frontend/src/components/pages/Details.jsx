@@ -47,6 +47,7 @@ export default function Details() {
               })`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              height: '100vh',
             }}
           />
           <Grid item xs={4}>
